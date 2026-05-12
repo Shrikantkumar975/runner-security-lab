@@ -11,8 +11,9 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      # Always use minimum permissions on self-hosted runners
       - name: Security message
-        run: echo Always use minimum permissions on self-hosted runners
+        run: echo "Security check started"
 
       - name: Check user
         run: whoami
@@ -21,4 +22,4 @@ jobs:
         run: hostname
 
       - name: Check folder
-        run: cd
+        run: pwd
